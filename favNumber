@@ -1,0 +1,16 @@
+let FavNumber = 15;
+let guess;
+
+while (true) {
+  guess = prompt("Guess my favorite number:");
+
+  if (guess === FavNumber) {
+    console.log("Acknowledge! My favorite number is " + FavNumber);
+    break;
+  } else if (guess < FavNumber) {
+    console.log("Very low! Try again.");
+  } else {
+    console.log("Very high! Try again.");
+  }
+}
+ to join this 
