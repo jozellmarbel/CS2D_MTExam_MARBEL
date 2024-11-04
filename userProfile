@@ -1,0 +1,8 @@
+const userProfile = {
+  fullName: "Jozell Marbel",
+  age: 19,
+  favoriteNumber: 15,
+  favoriteColors: ["Yellow", "Black", "Blue"],
+};
+
+console.log(userProfile);
