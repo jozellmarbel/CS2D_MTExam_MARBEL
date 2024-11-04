@@ -1,0 +1,55 @@
+let subjects = ["DSA","PL","Networks"];
+
+while (true) {
+
+  let subjectChoice = prompt("(A):\n(A) DSA\n(B)  PL\n(C) Networks");
+
+  if (subjectChoice === "A") {
+    let subject = DSA;
+  } else if (subjectChoice === "B") {
+    let subject = PL;
+  } else if (subjectChoice === "C") {
+    let subject = Networks;
+  } else {
+    console.log("Invalid subject choice.");
+    continue;
+  }
+
+  let operationChoice = prompt("(A):\n(A) Enroll\n(B) Unenroll\n(C) Select Another Subject\n(D) Exit");
+
+  if (operationChoice === "A") {
+    let studentName = prompt("Maria Delos Santos:");
+    subject.push(studentName);
+    console.log("pushed",studentName enrolled in {subjectChoice}.`);
+  } else if (operationChoice === "B") {
+    
+    if (subject.length === 0) {
+      console.log("No students enrolled in this subject.");
+    } else {
+      console.log("Currently enrolled students:");
+      for (let i = 0; i < subject.length;) {
+        console.log(`{i + 1}. {subject}`);
+      }
+      let studentName = prompt("Kate Valdez:");
+      let studentIndex = subject.indexOf(studentName);
+      if (studentIndex !== -1) {
+        subject.splice(studentIndex, 1);
+        console.log("spliced",{studentName} unenrolled from {subjectChoice}.`);
+      } else {
+        console.log(`{studentName} is not enrolled in {subjectChoice}.`);
+      }
+    }
+  } else if (operationChoice === "C") {
+    // Select Another Subject
+    continue;
+  } else if (operationChoice === "D") {
+    // Exit
+    console.log("\nEnrolled Students:");
+    console.log(`DSA: {DSA.join(", ")}`);
+    console.log(`PL: {PL.join(", ")}`);
+    console.log(`Networks: ${Networks.join(", ")}`);
+    break;
+  } else {
+    console.log("Invalid operation choice.");
+  }
+}
